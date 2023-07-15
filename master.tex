@@ -1,0 +1,119 @@
+\documentclass[a4paper, 11pt]{book}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{calc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+
+
+\setmainfont{EB Garamond}
+\newfontfamily{\bidFont}[RawFeature=+lnum]{EB Garamond}
+\newfontfamily{\scfont}[RawFeature=+smcp;-cv21;-cv27;+lnum]{EB Garamond}
+\newcommand{\CS}{$\clubsuit$}
+\newcommand{\SpS}{$\spadesuit$}
+\newcommand{\HS}{$\heartsuit$}
+\newcommand{\DS}{$\diamondsuit$}
+\newcommand{\NT}{NT}
+\newcommand{\Pass}{\scfont Pass}
+\newcommand{\Double}{\textsc{X}}
+\newcommand{\Redouble}{\textsc{XX}}
+% \newcommand{\hand}[4]{%
+% \addfontfeatures{Numbers=Lining}
+% \begin{center}
+% \begin{tabular}{@{}l@{}}
+% \SpS~#1\\
+% \HS~#2\\
+% \DS~#3\\
+% \CS~#4
+% \end{tabular}
+% \end{center}
+
+% }
+\newcommand{\marginfootnote}[1]{\marginpar{\footnotemark}\footnotetext{#1}}
+
+\newcommand{\sequence}[2]{%
+  \begin{center}
+    \begin{threeparttable}
+      \begin{tabular}[c]{cc}
+        \toprule
+        Opener & Responder \\
+        \midrule
+        #2\\
+        \bottomrule
+      \end{tabular}
+        #1
+    \end{threeparttable}
+  \end{center}
+}
+
+\newcommand{\bids}[1]{%
+  \begin{center}
+    \begin{tabular}[c]{c|l}
+      #1
+    \end{tabular}
+  \end{center}
+}
+
+\newcommand{\alphaRelay}{{\addfontfeature{RawFeature=-smcp}α}}
+\newcommand{\betaRelay}{{\addfontfeature{RawFeature=-smcp}β}}
+\newcommand{\gammaRelay}{{\addfontfeature{RawFeature=-smcp}γ}}
+\newcommand{\lambdaRelay}{{\addfontfeature{RawFeature=-smcp}λ}}
+\newcommand{\omegaRelay}{{\addfontfeature{RawFeature=-smcp}ω}}
+\newcommand{\kappaRelay}{{\addfontfeature{RawFeature=-smcp}κ}}
+
+\newcommand{\auction}[3]{%
+  \begin{center}
+    \begin{threeparttable}
+      \begin{tabular}[c]{cccc}
+        \toprule
+        #2 \\
+        \midrule
+        #3\\
+        \bottomrule
+      \end{tabular}
+        #1
+    \end{threeparttable}
+  \end{center}
+}
+
+% \newcommand{cmd}[args]{def}
+% \newcommand{\ord}[1]{{\addfontfeature{RawFeature=+ordn}#1}}
+
+\newcommand{\bid}[1]{%
+  {\bidFont #1}%
+}
+
+\title{Swiss Precision Club}
+\author{Jérôme Amiguet}
+
+
+\definecolor{gray75}{gray}{0.75}
+
+\newcommand{\marginsecnumber}[1]{%
+  \makebox[0pt][r]{#1\hspace{6pt}}%
+}
+
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}{\scfont\Huge}{\textcolor{gray75}{\marginsecnumber\thechapter}}{0pt}{}
+\titleformat{\section}{\Large\scfont\addfontfeature{RawFeature=-cv21}}{\textcolor{gray75}{\marginsecnumber\thesection}}{0pt}{\scfont}
+\titleformat{\subsection}{\large\scfont\addfontfeature{RawFeature=-cv21}}{\textcolor{gray75}{\marginsecnumber\thesubsection}}{0pt}{\scfont}
+\titleformat{\paragraph}{\scfont}{\centering\theparagraph}{1em}{\filcenter}
+\titleformat{\subparagraph}[runin]{\scfont}{\thesubparagraph}{1em}{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\input{generalconv.tex}
+\input{1C/1c.tex}
+\input{1D/1d.tex}
+\input{1M/1M.tex}
+%\input{2HS/2hs.tex}
+
+\bibliographystyle{plain}
+\bibliography{biblio}
+\end{document}

@@ -1,0 +1,22 @@
+{
+  "cSpell.words": [
+    "blackwoods",
+    "Lebensohl",
+    "minorwood",
+    "overcall",
+    "overcalled",
+    "Overcaller",
+    "preempt",
+    "Rebensohl",
+    "retransfer",
+    "Rubensohl",
+    "Scanian",
+    "Stayman",
+    "suiter",
+    "suiters",
+    "voidwoods"
+  ],
+  "files.watcherExclude": {
+    "**/target": true
+  }
+}
