@@ -52,7 +52,25 @@ In competitive auction we use a mix of Lebensohl and Rubensohl. As in Slow Leben
   \bid{3\SpS} & Stayman game invite or better without \SpS\ stopper;\\
   \bid{3\NT} & To play without stopper.
 }
-Bid at the same level are always non-forcing, transiting with \bid{2\NT} shows a stopper when it is not a weak hand. We play Rebensohl on any one suiter overcall from our no trump bid, over one suiter overcall of our strong club opening bid and anytime we have a take out double of a major and they are at the second level. On an \bid{1\NT} overcall advancer bid as in rebensohl at the second level when the overcalled suit has length. 
+Bid at the same level are always non-forcing, transiting with \bid{2\NT} shows a stopper when it is not a weak hand. We play Rebensohl on any one suiter overcall from our no trump bid, over one suiter overcall of our strong club opening bid and anytime we have a take out double of a major and they are at the second level. On an \bid{1\NT} overcall advancer bid as in rebensohl at the second level when the overcalled suit has length.
+On interferences at the four level, bids below the cue bid of the suit are non-forcing. The cue bid is no longer a stayman but a transfer inviting to the slam. On a jump preempt over our strong opening,
+\auction{%
+  \tiny
+  \begin{tablenotes}
+  \item[a] Strong club
+  \item[b] Natural preempt
+  \end{tablenotes}
+}{Opener & Opponent & Responder & Opponent}{
+  \bid{1\CS}\tnote{a} & (\bid{4\DS})\tnote{b} & ? &
+}
+responder can follow with
+\bids{
+  \Double & Values, no five cards suit;\\
+  \bid{4\HS/\SpS} & To play;\\
+  \bid{4\NT} & To play;\\
+  \bid{5\CS} & To play;\\
+  \bid{5\DS/\HS/\SpS} & Transfer, slam try;
+}
 \section{Unusual versus Unusual}
 When one of the side has shown an explicit two suiters, we use the opponent suits to show interest in one or the other of our suits. There is two context, our side overcalled to show a two suiters
 \auction{
@@ -133,7 +151,7 @@ This start of auction should be used when we are exploratory for the slam. Opene
   \bid{3\SpS} & Maximum with three card support with a weak doubleton\\
   \bid{4M} & Maximum four card support hardly any slam interest.
 }
-\subsection{Development after major transfer}
+\subsection{Development after major transfer}\label{majorTransfer}
 Over a major transfer, we supper accept at \bid{2\NT} and \bid{3M} is four card support minimum. On the supper accept we retransfer the major. On a simple accept of the transfer the responder can follow 
 \bids{
   \bid{2\SpS} & Five spade and four heart game invite;\\
@@ -143,6 +161,16 @@ Over a major transfer, we supper accept at \bid{2\NT} and \bid{3M} is four card 
   \bid{3\NT} & Choose game to play;\\
   \bid{4M} & Small slam invite.
 }
+\paragraph{\bid{1\NT}–\bid{1M}–\bid{2\NT}}
+There is two different informations to handle, first do we have the strength for the game. And secondly, if we have the strength to play the game, do we have useful shortness. Responder follows with
+\bids{
+  \bid{3\CS} & to be discussed;\\
+  \bid{3M-1} & Retransfer;\\
+  \bid{3M} & to be discussed;\\
+  \bid{3NT} & to be discussed;\\
+  \bid{4m} & Void in corresponding minor;\\
+}\marginpar{\vskip -2cm\color{red} L'idée est de prendre quelque chose similaire à ce que vous joueriez avec Marco sur \bid{1\CS-1\DS-2\NT} pour moi on devrait avoir en direct un void et rentrasfer puis bid avec un singleton}
+
 \paragraph{\bid{2\NT} Rebid}
 We use this bid to show hands with slam interest, and opener is asked to show his support in the major or deny it with
 \bids{
